@@ -25,7 +25,7 @@ public class Archetype {
         return damage;
     }
 
-     Archetype(String name, int damage,int hp,String initiative){
+     public Archetype(String name, int damage, int hp, String initiative){
         this.name = name;
         this.damage = damage;
         this.hp = hp;
@@ -36,12 +36,11 @@ public class Archetype {
 
     @Override
     public String toString() {
-        return "Archetype{" +
-                "name='" + name + '\'' +
-                ", damage=" + damage +
-                ", hp=" + hp +
-                ", initiative='" + initiative + '\'' +
-                '}';
+        return "Archetype " + "\n" +
+                "name = " + name + "\n" +
+                "damage = " + damage + "\n" +
+                "hp = " + hp + "\n" +
+                "initiative =  " + initiative + "\n";
     }
 
     public static void main(String args[]){
