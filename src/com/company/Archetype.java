@@ -7,7 +7,7 @@ public class Archetype {
     private String name; // Création attributs privés pour le nom, les dégâts, points de vie et initiative
     private int damage;
     private int hp;
-    private String initiative;
+    private int initiative;
 
     public String getName() { //Création méthode publique qui récupère valeurs des attributs
         return name;
@@ -18,14 +18,14 @@ public class Archetype {
     public int getHp() {
         return hp;
     }
-    public String getInitiative() {
+    public int getInitiative() {
         return initiative;
     }
     public int hitCharacter(){
         return damage;
     }
 
-     public Archetype(String name, int damage, int hp, String initiative){
+     public Archetype(String name, int damage, int hp, int initiative){
         this.name = name;
         this.damage = damage;
         this.hp = hp;
@@ -44,12 +44,6 @@ public class Archetype {
     }
 
     public static void main(String args[]){
-        Archetype d1 = new Archetype("rogue", 12, 13, "rogue");
-        Archetype d2 = new Archetype("warrior", 12, 13, "warrior");
-        Archetype d3 =  new Archetype("maje", 12, 13, "maje");
-        System.out.println(d1);
-        System.out.println(d2);
-        System.out.println(d3);
     }
 }
 
