@@ -1,6 +1,7 @@
 package com.company;
 
 
+<<<<<<< HEAD
 //Création d'une classe non statique
 public class Archetype extends Main{
 
@@ -16,6 +17,19 @@ public class Archetype extends Main{
 
 
     public static String getName() { //Création méthode publique qui récupère valeurs des attributs
+=======
+//creation of a non-static class
+public class Archetype {
+
+    private String name; // Creation of private attributes for the name, damage, health points (hp) and initiative.
+    private int damage;
+    private int hp;
+    private int initiative;
+    private int shield;
+    private int magicDamage;
+
+    public String getName() { //creation of a public method which will get the value of the attributes.
+>>>>>>> ce535b9a017f9730963ff93afd7b0e5594f668ef
         return name;
     }
     public static int getHp() {
@@ -30,6 +44,7 @@ public class Archetype extends Main{
     public int hitCharacter(){
         return damage;
     }
+<<<<<<< HEAD
     public static int getMonsterdmg(){
         return monsterdmg;
     }
@@ -43,6 +58,12 @@ public class Archetype extends Main{
         return shield;
     }
     public static int damageIncrease(){
+=======
+    public int protectWarrior(){
+        return shield;
+    }
+    public int damageIncrease(){
+>>>>>>> ce535b9a017f9730963ff93afd7b0e5594f668ef
         return magicDamage;
     }
 
@@ -54,11 +75,12 @@ public class Archetype extends Main{
         this.shield = shield;
         this.magicDamage = magicDamage;
     }
-     //Surchage de la méthode toString
+     //Overload of the toString method
 
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         if(shield >= 1) {
             return "Archetype " + "\n" +
                     "Name: " + name + "\n" +
@@ -68,10 +90,14 @@ public class Archetype extends Main{
                     "Shield: " + shield + "\n";
         }
         else if (magicDamage >=1) {
+=======
+        if (shield >= 1) {
+>>>>>>> ce535b9a017f9730963ff93afd7b0e5594f668ef
             return "Name: " + name + "\n" +
                     "Damage: " + damage + "\n" +
                     "HP: " + hp + "\n" +
                     "Initiative:  " + initiative + "\n" +
+<<<<<<< HEAD
                     "Magic Damage: " + magicDamage + "\n";
         }
         else {
@@ -98,6 +124,23 @@ public class Archetype extends Main{
         magicDamage = magicDamage / 2;
         System.out.println(damage + magicDamage + " " + getName() + " damage");
         System.out.println(monsterhp + " monster hp");
+=======
+                    "Shield: " + shield + "\n";
+        }
+        else if (magicDamage >=1){
+                return "Name: " + name + "\n" +
+                        "Damage: " + damage + "\n" +
+                        "HP: " + hp + "\n" +
+                        "Initiative:  " + initiative + "\n" +
+                        "Magic Damage: " + magicDamage + "\n";
+            }
+            else{
+            return  "Name: " + name + "\n" +
+                "Damage: " + damage + "\n" +
+                "HP: " + hp + "\n" +
+                "Initiative:  " + initiative + "\n";
+        }
+>>>>>>> ce535b9a017f9730963ff93afd7b0e5594f668ef
     }
 
     public static void main(String args[]){
