@@ -5,8 +5,11 @@ import com.company.Archetype;
 public class Main {
 
     public static void main(String[] args) {
+        //Scanner nickname = new Scanner(System.in);
+        //System.out.println("What's your nickname? Must be between 2 and 16 characters.");
+        //String username = nickname.next();
 
-        System.out.println("\nHello! Welcome to our RPG game!\n" + "so wha' we doin' today? :)\n" + "\nSelect between 1 and 4!\n");
+        System.out.println("Hello! Welcome to our RPG game!\n" + "so wha' we doin' today?");
         menu();
     }
 
@@ -93,23 +96,19 @@ public class Main {
                 break;
 
             case "4":
-                System.out.println("It's okay man, have a great day! Take care. :)\n" +
+                System.out.println("It's okay man, have a great day! Take care.\n" +
                         "YOU: Thanks, you too!");
-                System.out.println("Thanks, cya! :D");
+                System.out.println("Thanks.");
                 System.exit(0);
 
             default:
-                if (choice.equals("") || choice.equals(" ")){
+                if (choice == "" || choice == " "){
                     System.out.println("Too lazy to say something? XD\n" +
                             "You can choose between 1 and 4\n");
                 }
                 else if (choice.equals("and") || choice.equals("And") || choice.equals("AND") || choice.equals("ANd") || choice.equals("aNd") || choice.equals("AnD") || choice.equals("aND") || choice.equals("anD")){
                     System.out.println("LMAO 'and' isn't an option, but good joke \uD83D\uDC80 \n");
-<<<<<<< HEAD
                 }
-=======
-            }
->>>>>>> ce535b9a017f9730963ff93afd7b0e5594f668ef
                 else{
                     System.out.println("Nope! You gotta chose between 1 and 4 lol\n");
                 }
