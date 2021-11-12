@@ -3,11 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //Scanner nickname = new Scanner(System.in);
-        //System.out.println("What's your nickname? Must be between 2 and 16 characters.");
-        //String username = nickname.next();
 
-        System.out.println("Hello! Welcome to our RPG game!\n" + "so wha' we doin' today?");
+        System.out.println("\nHello! Welcome to our RPG game!\n" + "so wha' we doin' today? :)\n" + "\nSelect between 1 and 4!\n");
         menu();
     }
 
@@ -16,13 +13,13 @@ public class Main {
     }
 
 
-    static void retour_menu() { //Fonction qui va permettre au joueur de retourner au menu du jeu
+    static void retour_menu() { //function that'll allow the user to choose in the menus with 1, 2, 3 and 4.
         System.out.println("if u wanna return to the menu, tap 0 and enter!");
         Scanner comeBack = new Scanner(System.in);
         String returnToMenu = comeBack.nextLine();
         String cutUserInput = returnToMenu.substring(0, 1);
 
-        if (returnToMenu == "0"){
+        if (returnToMenu.equals("0")){
             menu();
         }
         else if (returnToMenu.length()>1){
@@ -78,16 +75,19 @@ public class Main {
                 break;
 
             case "4":
-                System.out.println("It's okay man, have a great day! Take care.\n" +
+                System.out.println("It's okay man, have a great day! Take care. :)\n" +
                         "YOU: Thanks, you too!");
-                System.out.println("Thanks.");
+                System.out.println("Thanks, cya! :D");
                 System.exit(0);
 
             default:
-                if (choice == "" || choice == " "){
+                if (choice.equals("") || choice.equals(" ")){
                     System.out.println("Too lazy to say something? XD\n" +
                             "You can choose between 1 and 4\n");
                 }
+                else if (choice.equals("and") || choice.equals("And") || choice.equals("AND") || choice.equals("ANd") || choice.equals("aNd") || choice.equals("AnD") || choice.equals("aND") || choice.equals("anD")){
+                    System.out.println("LMAO 'and' isn't an option, but good joke \uD83D\uDC80 \n");
+            }
                 else{
                     System.out.println("Nope! You gotta chose between 1 and 4 lol\n");
                 }

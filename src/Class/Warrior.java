@@ -5,6 +5,6 @@ import com.company.*;
 public class Warrior extends Archetype {
 
     public Warrior() {
-        super("warrior", 18, 190, 10);
+        super("Warrior", 18, 190, 10,8,0);
     }
 }
