@@ -17,16 +17,27 @@ public class Main {
 
 
     static void retour_menu() { //Fonction qui va permettre au joueur de retourner au menu du jeu
-        System.out.println("\nreturn to menu, write 10!");
-        java.util.Scanner rt;
-        rt = new Scanner(System.in);
-        int retour = Integer.parseInt(rt.nextLine());
-        if (retour == 10) {
+        System.out.println("if u wanna return to the menu, tap 0 and enter!");
+        Scanner comeBack = new Scanner(System.in);
+        String returnToMenu = comeBack.nextLine();
+        String cutUserInput = returnToMenu.substring(0, 1);
+
+        if (returnToMenu == "0"){
             menu();
         }
-        System.out.println("Nope! You gotta chose between 10\n");
-        retour_menu();
-    }
+        else if (returnToMenu.length()>1){
+            returnToMenu = cutUserInput;
+            System.out.println("Dude... There's only one number to enter and u still said '" + returnToMenu + "' (yeah cutted it out cuz it was too frickin' long \n" +
+                    "(didn't said the other 'F' word cuz family friendly LETS GOOOOO)). Anyway, say 0 next time :/\n");
+            retour_menu();
+        }
+        else{
+            System.out.println("Dude... There's only one number to enter and u still said '" + returnToMenu + "' Say 0 next time :/\n");
+            retour_menu();
+            }
+        }
+
+
 
 
     public static void menu() {
@@ -35,8 +46,8 @@ public class Main {
                 "3. Who are the playable characters? \n" +
                 "4. I changed my mind, i don't want to play...");
 
-        Scanner scan = new Scanner(System.in);
-        String choice = scan.nextLine();
+        Scanner choose = new Scanner(System.in);
+        String choice = choose.nextLine();
 
         switch (choice) {
 
@@ -62,7 +73,7 @@ public class Main {
                         "The Mage can deal a BIG but like really big amount of damage on his first turns as he has two type damage which are: Magic and Normal damage.\n" +
                         "His damage is his normal damage AND magic damage together. His magic damage will decrease by 50% at each attack.\n" +
                         "The Thief has a chance of 25% to dodge opponent's attack and a 10% chance to deal 200% of damage.\n");
-                System.out.println("Seems cool! Thanks.\n");
+                System.out.println("YOU: Seems cool! Thanks :)\n");
                 retour_menu();
                 break;
 

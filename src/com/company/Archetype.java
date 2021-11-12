@@ -37,10 +37,10 @@ public class Archetype {
     @Override
     public String toString() {
         return "Archetype " + "\n" +
-                "name = " + name + "\n" +
-                "damage = " + damage + "\n" +
-                "hp = " + hp + "\n" +
-                "initiative =  " + initiative + "\n";
+                "Name: " + name + "\n" +
+                "Damage: " + damage + "\n" +
+                "HP: " + hp + "\n" +
+                "Initiative:  " + initiative + "\n";
     }
 
     public static void main(String args[]){

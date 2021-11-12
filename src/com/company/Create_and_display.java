@@ -12,7 +12,10 @@ public class Create_and_display extends Main {
 
     public static void main(int args) {
 
-        System.out.println("select your class : thief - warrior - wizard");
+        System.out.println("Select your fighter:\n" +
+                "1. Thief\n" +
+                "2. Warrior\n" +
+                "3. Wizard");
         Scanner sc = new Scanner(System.in);
         String select = sc.nextLine();
 
@@ -25,21 +28,67 @@ public class Create_and_display extends Main {
         character.add(warrior);
         character.add(wizard);
 
+
+
         switch(select) {
 
-            case "thief":
-                System.out.println(thief);
+            case "1":
+                System.out.println("Do you want to play as the Thief?\n" +
+                        " Y: Yes, N: No.");
+                Scanner perso = new Scanner(System.in);
+                String selectAgain = perso.nextLine();
+                if (selectAgain == "Y"){
+                    System.out.println(thief);
+                }
+                else if (select == "N") {
+                    main(0);
+                }
+                else{
+                    System.out.println("Imma act like u said no, aight?");
+                    main(0);
+                }
+
                 break;
 
-            case "warrior":
-                System.out.println(warrior);
+            case "2":
+                System.out.println("Do you want to play as the Warrior?\n" +
+                        " Y: Yes, N: No.");
+                Scanner perso2 = new Scanner(System.in);
+                String selectAgain2 = perso2.nextLine();
+
+                if (selectAgain2 == "Y"){
+                    System.out.println(warrior);
+                }
+                else if (selectAgain2 == "N") {
+                    main(0);
+                }
+                else{
+                    System.out.println("Imma act like u said no, aight?");
+                    main(0);
+                }
                 break;
 
-            case "wizard":
-                System.out.println(wizard);
+            case "3":
+                System.out.println("Do you want to play as the Wizard?\n" +
+                        " Y: Yes, N: No.");
+                Scanner perso3 = new Scanner(System.in);
+                String selectAgain3 = perso3.nextLine();
+
+                if (selectAgain3 == "Y"){
+                    System.out.println(wizard);
+                }
+                else if (selectAgain3 == "N") {
+                    main(0);
+                }
+                else{
+                    System.out.println("Imma act like u said no, aight?");
+                    main(0);
+                }
                 break;
 
             default:
+                System.out.println("I'm boutta break everything... U gotta choose between: 1; 2 or 3. You missclicked... Right? xD\n" +
+                        "Anyway...\n");
                 main(0);
         }
     }
