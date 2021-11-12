@@ -35,8 +35,8 @@ public class Create_and_display extends Main {
             case "1":
                 System.out.println("Do you want to play as the Thief?\n" +
                         " Y: Yes, N: No.");
-                Scanner perso = new Scanner(System.in);
-                String selectAgain = perso.nextLine();
+                Scanner character1 = new Scanner(System.in);
+                String selectAgain = character1.nextLine();
                 if (selectAgain == "Y"){
                     System.out.println(thief);
                 }
@@ -53,13 +53,13 @@ public class Create_and_display extends Main {
             case "2":
                 System.out.println("Do you want to play as the Warrior?\n" +
                         " Y: Yes, N: No.");
-                Scanner perso2 = new Scanner(System.in);
-                String selectAgain2 = perso2.nextLine();
+                Scanner character2 = new Scanner(System.in);
+                String selectAgain2 = character2.nextLine();
 
-                if (selectAgain2 == "Y"){
+                if (selectAgain2.equals("Y") || selectAgain2.equals("y")){
                     System.out.println(warrior);
                 }
-                else if (selectAgain2 == "N") {
+                else if (selectAgain2.equals("N") || selectAgain2.equals("n")) {
                     main(0);
                 }
                 else{
@@ -71,13 +71,13 @@ public class Create_and_display extends Main {
             case "3":
                 System.out.println("Do you want to play as the Wizard?\n" +
                         " Y: Yes, N: No.");
-                Scanner perso3 = new Scanner(System.in);
-                String selectAgain3 = perso3.nextLine();
+                Scanner character3 = new Scanner(System.in);
+                String selectAgain3 = character3.nextLine();
 
-                if (selectAgain3 == "Y"){
+                if (selectAgain3.equals("Y") || selectAgain3.equals("y")){
                     System.out.println(wizard);
                 }
-                else if (selectAgain3 == "N") {
+                else if (selectAgain3.equals("N") || selectAgain3.equals("n")) {
                     main(0);
                 }
                 else{
