@@ -4,6 +4,6 @@ import com.company.*;
 public class Wizard extends Archetype {
 
     public Wizard() {
-        super("wizard", 15, 115, 15);
+        super("Wizard", 15, 115,15,0,49);
     }
 }

@@ -1,5 +1,7 @@
 package com.company;
 import java.util.Scanner;
+import com.company.Archetype;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,18 +13,14 @@ public class Main {
         menu();
     }
 
-    static void player(){
 
-    }
-
-
-    static void retour_menu() { //Fonction qui va permettre au joueur de retourner au menu du jeu
+    static void retour_menu() { //function that'll allow the user to choose in the menus with 1, 2, 3 and 4.
         System.out.println("if u wanna return to the menu, tap 0 and enter!");
         Scanner comeBack = new Scanner(System.in);
         String returnToMenu = comeBack.nextLine();
         String cutUserInput = returnToMenu.substring(0, 1);
 
-        if (returnToMenu == "0"){
+        if (returnToMenu.equals("0")){
             menu();
         }
         else if (returnToMenu.length()>1){
@@ -34,9 +32,8 @@ public class Main {
         else{
             System.out.println("Dude... There's only one number to enter and u still said '" + returnToMenu + "' Say 0 next time :/\n");
             retour_menu();
-            }
         }
-
+    }
 
 
 
@@ -46,6 +43,8 @@ public class Main {
                 "3. Who are the playable characters? \n" +
                 "4. I changed my mind, i don't want to play...");
 
+        boolean fight = false;
+
         Scanner choose = new Scanner(System.in);
         String choice = choose.nextLine();
 
@@ -53,7 +52,26 @@ public class Main {
 
             case "1":
                 System.out.println("Aight then, let's do this!");
-                Create_and_display.main(0);
+                Create_and_display.Create();
+                while (fight != true){
+                    if(Archetype.getHp() > 0 && Archetype.getMonsterhp() > 0) {
+                        System.out.println(Archetype.getName());
+                        Archetype.getdmg();
+                        if (Archetype.getMonsterhp() > 0 && Archetype.getHp() > 0) {
+                            System.out.println("monster");
+                            Archetype.getdmgmonster();
+                            System.out.println("\n");
+                        }
+                        else{
+                            fight = true;
+                                System.out.println("you lose");
+                            }
+                    }
+                    else{
+                        fight = true;
+                            System.out.println("you win");
+                        }
+                    }
                 break;
 
             case "2":
@@ -87,6 +105,9 @@ public class Main {
                 if (choice == "" || choice == " "){
                     System.out.println("Too lazy to say something? XD\n" +
                             "You can choose between 1 and 4\n");
+                }
+                else if (choice.equals("and") || choice.equals("And") || choice.equals("AND") || choice.equals("ANd") || choice.equals("aNd") || choice.equals("AnD") || choice.equals("aND") || choice.equals("anD")){
+                    System.out.println("LMAO 'and' isn't an option, but good joke \uD83D\uDC80 \n");
                 }
                 else{
                     System.out.println("Nope! You gotta chose between 1 and 4 lol\n");
